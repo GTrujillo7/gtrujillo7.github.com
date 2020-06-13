@@ -7,5 +7,24 @@
 </head>
 <body>
     <h2>Hola {{ username }} {{ userlast}}</h2>
+
+    {% if is_premium %}
+        <p>
+            El curso es premium
+        </p>
+    {%else %}
+    <p>
+        El Curso es gratuito
+    </p>
+    {% endif %}
+
+    {% if courses %}
+        <p>Listado De Cursos :</p>
+        <ul>
+            {% for course in courses %}
+                <li> {{ course }}</li>
+            {% endfor %}
+        </ul>
+    {% endif%}
 </body>
 </html>
