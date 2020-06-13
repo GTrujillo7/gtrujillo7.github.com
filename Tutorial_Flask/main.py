@@ -1,5 +1,5 @@
 from flask import Flask
-from flask import render_template
+from flask import render_template, request
 
 app = Flask(__name__)
 
@@ -22,6 +22,12 @@ def usuario(last_name, name, age):
 # @app.route('/usuario/<username>') #
 # def usuario(username):
 #    return "Hola " + username
+
+@app.route('/datos')
+def datos():
+    nombre = request.args.get("nombre", "") #Diccionario
+    curso = request.args.get("curso", "")
+    return "Listado de datos : " + nombre + " " + curso
 
 if __name__ == '__main__':
     app.run(debug=True, port=9000)
