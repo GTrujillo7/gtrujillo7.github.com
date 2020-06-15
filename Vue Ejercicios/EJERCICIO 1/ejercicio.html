@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio</title>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+
+</head>
+<body>
+	
+	<div id ="aplicacion" class="miaplicacion">
+
+		<h1>{{ mensaje }}</h1>
+
+		<input v-model="mensaje" type="text">
+	</div>
+	
+	<script type="text/javascript">
+		
+		new Vue({
+		  el: ".miaplicacion",
+		  data:{
+
+		  		mensaje: "Interpolando"
+
+		  }	
+		})
+
+	</script>
+
+</body>
+</html>
