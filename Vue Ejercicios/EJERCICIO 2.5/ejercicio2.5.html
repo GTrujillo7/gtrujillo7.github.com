@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Metodos con Vue</title>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+
+</head>
+<body>
+	
+	<div id ="aplicacion">
+		
+		Valor A: <br/>
+		<input v-model.number="valorA" type="number" step="1" />
+		<br/>
+
+		Valor B: <br/>
+		<input v-model.number="valorB" type="number" step="1" />
+		<br/>
+		<h1>{{ suma() }}</h1>
+
+	</div>
+	
+	<script type="text/javascript">
+		
+		new Vue({
+		  el: "#aplicacion",
+		  data:{
+		  		valorA:0,
+		  		valorB:0
+
+		  },
+		  methods: {
+		  		suma:function(){
+		  			return "A+B es: "+(this.valorA + this.valorB);
+		  		}
+		  },
+
+		})
+	</script>
+
+
+<style>
+
+input{
+	height: 20px;
+	background: #ccddff;
+	text-shadow: 2px 2px 5px red;
+
+}
+	
+h1{
+	color: green;
+	text-decoration: underline;
+}
+
+
+
+</style>
+	
+</body>
+</html>
