@@ -1,5 +1,22 @@
 /*** Add your styles here **/
 
+body {
+    background-color: #f8f8f8;
+}
+
+.ebcabezado {
+    font-size: 2.4rem;
+    font-family: "Lato", sans-serif;
+    color: #000000;
+    line-height: 2.4rem;
+}
+
+.encabezado span {
+    font-size: 3.8rem;
+    font-family: 'Italianno', cursive;
+    color: #e082a8;
+}
+
 .sociales ul {
     list-style: none;
     margin: 0;
@@ -68,9 +85,140 @@
     color: #ffffff;
     font-size: 1.4rem;
     transition: all .5s ease-in-out;
+    font-family: "Raleway", sans-serif;
 }
 
 .nav-link:hover {
     background-color: #bde8dd;
     color: #000000;
+}
+
+/** CAROUSEL **/
+
+.carousel-caption h3{
+    font-family: "Raleway", sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: #ffffff;
+}
+
+/** NUEVO SITIO **/
+
+.nuevo-sitio p {
+    font-family: "Lato", sans-serif;
+    color: #979797;
+    font-size: 1.6rem;
+}
+
+/** SERVICIOS **/
+
+.imagen-servicio img {
+    border: 6px solid #ffffff;
+    -webkit-transition: transform .3s ease;
+    -ms-transition: transform .3s ease;
+    transition: transfrom .2s ease ;
+
+}
+
+.imagen-servicio img:hover {
+    transform: scale(1.2) rotate(10deg);
+
+}
+
+.servicio-info {
+    background-color: #ffffff;
+    margin-top: -5rem;
+}
+
+.servicio-info .btn-primary {
+    border-radius: 0;
+    background-color:  #e082a8;
+    border: none;
+}
+
+/** Horarios **/
+.horario {
+    background-color: #8ed3cc;
+    color: #ffffff;
+  }
+  .horario h2 {
+    color: #ffffff;
+    font-size: 2rem;
+  }
+  .horario .table {
+      border: 2px solid #e082a8;
+  }
+  .horario .table thead {
+    background-color: #e082a8;
+  }
+  .horario .table td,
+  .horario .table thead th {
+    border: none;
+  }
+  .horario .table tbody tr td {
+    padding:.35rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+  }
+  
+  .bg-horario{
+    background-image:url(../img/bg_horarios.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 300px;
+  }
+
+  /* Productos*/
+.productos .card{
+    border: none;
+  }
+  .productos .card a {
+    color: #000000;
+  }
+  .productos .card a:hover {
+    text-decoration: none;
+  }
+  .productos .card h3 {
+    color: #e082a8;
+    font-size: 1rem;
+  }
+  .productos .card p {
+    font-size: .8rem;
+  }
+  .productos .card p.precio {
+    font-size: 1.6rem;
+    color: #979797;
+  }
+
+  /** Citas **/
+.citas {
+    background-image: url(../img/bg_citas.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+@media (min-width:992px) {
+    .citas {
+        background-size: cover;
+    }
+}
+.citas h3 {
+    color: #fff;
+    font-size: 3.5rem;
+    line-height: 4rem;
+}
+.citas p {
+    font-size: 1.2rem;
+    color: #fff;
+    line-height: 2.4rem;
+}
+.citas .btn-primary {
+    background-color: #8ed3cc;
+    border: none;
+    border-radius: 0;
+    padding: 1rem 5rem;
+    font-family: 'Lato', sans-serif;
+}
+.citas .btn-primary:hover {
+    background-color: #68beb5;
 }
