@@ -1,1 +1,76 @@
 /*** Add your styles here **/
+
+.sociales ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sociales ul li {
+    position: relative;
+    display: inline-block;
+}
+
+.sociales ul li a::before {
+    font-family: "FontAwesome";
+    display: inline-block;
+    vertical-align: top;
+    padding: 0.4rem;
+    content: "\f08e";
+    -webkit-font-smoothing: antialised;
+    font-size: 2rem;
+    color: #e082a8;
+}
+
+.sociales ul li a[href*="facebook.com"]::before{
+    content: '\f230';
+}
+
+.sociales ul li a[href*="twitter.com"]::before{
+    content: '\f081';
+}
+
+.sociales ul li a[href*="instagram.com"]::before{
+    content: '\f16d';
+}
+
+.sociales ul li a[href*="pinterest.com"]::before{
+    content: '\f0d2';
+}
+
+.sociales ul li a[href*="youtube.com"]::before{
+    content: '\f16a';
+}
+
+/** NAVEGACION **/
+
+.navegacion {
+    background-color: #8ed3cc;
+}
+
+.navbar-light .navbar-toggler{
+    background-color: #ffffff;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-brand:hover {
+    color: #ffffff;
+}
+
+.nav-principal {
+    background-image: url(../img/border_horizontal.png),
+                      url(../img/border_horizontal.png);
+    background-repeat: repeat-x;
+    background-position: 0px top, 0px bottom;
+}
+
+.nav-link {
+    color: #ffffff;
+    font-size: 1.4rem;
+    transition: all .5s ease-in-out;
+}
+
+.nav-link:hover {
+    background-color: #bde8dd;
+    color: #000000;
+}
