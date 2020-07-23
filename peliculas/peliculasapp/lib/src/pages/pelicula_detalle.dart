@@ -43,7 +43,7 @@ class PeliculaDetalle extends StatelessWidget {
         background: FadeInImage(
           image: NetworkImage(pelicula.getBackgroundImg()),
           placeholder: AssetImage("assets/img/loading.gif"),
-          fadeInDuration: Duration(microseconds: 150),
+          fadeInDuration: Duration(milliseconds: 75),
           fit: BoxFit.cover,
         ),
       ),
@@ -56,11 +56,13 @@ class PeliculaDetalle extends StatelessWidget {
       child: Row(
         children: <Widget>[
           Hero(
-            tag: pelicula.id,
+            tag: pelicula.uniqueId,
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20.0),
-              child: Image(
+              child: FadeInImage(
+                fadeInDuration: Duration(microseconds: 150),
                 image: NetworkImage(pelicula.getPosterImg()),
+                placeholder: AssetImage("assets/img/no-image.jpg"),
                 height: 150.0,
               ),
             ),
