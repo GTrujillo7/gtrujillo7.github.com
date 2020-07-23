@@ -49,20 +49,20 @@ class Pelicula {
   });
 
   Pelicula.fromJsonMap(Map<String, dynamic> json) {
-    voteCount       = json["vote_count"];
-    id              = json["id"];
-    video           = json["video"];
-    voteAverage     = json["vote_average"] / 1;
-    title           = json["title"];
-    popularity      = json["popularity"] / 1;
-    posterPath      = json["poster_path"];
+    voteCount = json["vote_count"];
+    id = json["id"];
+    video = json["video"];
+    voteAverage = json["vote_average"] / 1;
+    title = json["title"];
+    popularity = json["popularity"] / 1;
+    posterPath = json["poster_path"];
     originalLanguage = json["original_languaje"];
-    originalTitle   = json["original_title"];
-    genreIds        = json["genre_ids"].cast<int>();
-    backdropPath    = json["backdrop_path"];
-    adult           = json["adult"];
-    overview        = json["overview"];
-    releaseDate     = json["release_date"];
+    originalTitle = json["original_title"];
+    genreIds = json["genre_ids"].cast<int>();
+    backdropPath = json["backdrop_path"];
+    adult = json["adult"];
+    overview = json["overview"];
+    releaseDate = json["release_date"];
   }
 
   getPosterImg() {
@@ -70,6 +70,14 @@ class Pelicula {
       return "https://image.shutterstock.com/image-vector/error-404-page-not-found-600w-1019182783.jpg";
     } else {
       return "https://image.tmdb.org/t/p/w500/$posterPath";
+    }
+  }
+
+  getBackgroundImg() {
+    if (posterPath == null) {
+      return "https://image.shutterstock.com/image-vector/error-404-page-not-found-600w-1019182783.jpg";
+    } else {
+      return "https://image.tmdb.org/t/p/w500/$backdropPath";
     }
   }
 }
