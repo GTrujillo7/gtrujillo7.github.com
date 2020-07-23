@@ -64,4 +64,12 @@ class Pelicula {
     overview = json["overview"];
     releaseDate = json["release_date"];
   }
+
+  getPosterImg() {
+    if (posterPath == null) {
+      return "https://image.shutterstock.com/image-vector/error-404-page-not-found-600w-1019182783.jpg";
+    } else {
+      return "https://image.tmdb.org/t/p/w500/$posterPath";
+    }
+  }
 }
