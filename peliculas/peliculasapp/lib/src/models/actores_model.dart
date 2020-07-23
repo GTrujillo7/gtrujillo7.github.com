@@ -5,7 +5,7 @@ class Cast {
     if (jsonList == null) return;
 
     jsonList.forEach((element) {
-      final actor = Actor.fromJsonMap(item);
+      final actor = Actor.fromJsonMap(element);
       actores.add(actor);
     });
   }
@@ -44,7 +44,7 @@ class Actor {
   }
 
   getFoto() {
-    if (posterPath == null) {
+    if (profilePath == null) {
       return "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR5Ah9utqmJkkJocE2O5-fUOFMXyqq9avWWAA&usqp=CAU";
     } else {
       return "https://image.tmdb.org/t/p/w500/$profilePath";
