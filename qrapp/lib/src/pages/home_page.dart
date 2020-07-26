@@ -3,6 +3,8 @@ import 'package:qrapp/src/pages/mapas_page.dart';
 
 import 'direcciones_page.dart';
 
+import 'package:barcode_scan/barcode_scan.dart';
+
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -28,10 +30,29 @@ class _HomePageState extends State<HomePage> {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.filter_center_focus),
-        onPressed: () {},
+        onPressed: _scanQR,
         backgroundColor: Theme.of(context).primaryColor,
       ),
     );
+  }
+
+  _scanQR() async {
+    String futureString = "";
+
+    //https://www.youtube.com
+    //geo:32.4924828,-117.0032461,500
+
+    try {
+      futureString = await BarcodeScanner.scan();
+    } catch (e) {
+      futureString = e.toString();
+    }
+
+    print("Future String: $futureString");
+
+    if (futureString != null) {
+      print("Tenemos Data");
+    }
   }
 
   Widget _llamarPagina(int paginaActual) {
