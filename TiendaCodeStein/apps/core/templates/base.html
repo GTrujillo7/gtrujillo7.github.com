@@ -3,14 +3,14 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>{% block title %}{% endblock %}The Gab Store</title>
+		<title>{% block title %}{% endblock %}Saul Gadgets</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
 	</head>
 
 	<body>
 		<nav class="navbar is-dark">
 			<div class="navbar-brand">
-				<a class="navbar-item" href="{% url 'frontpage' %}">The Gab Store</a>
+				<a class="navbar-item" href="{% url 'frontpage' %}">Saul Gadgets</a>
 
 				<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="main-navbar">
 					<span aria-hidden="true"></span>
@@ -49,5 +49,9 @@
 				</div>
 			</div>
 		</footer>
+
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		{% block scripts %}
+		{% endblock %}
 	</body>
 </html>
